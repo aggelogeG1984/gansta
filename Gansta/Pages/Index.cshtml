@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Gansta App";
+}
+
+<h2>I am gasta mother fuckers!!!</h2>
+
+<p>Πάτα ένα κουμί και ο γκανστα θα λαλήσει</p>
+
+<!-- Button 1 -->
+<button onclick="playAudio('gnosi.mp3')" class="btn btn-primary">Γνώση</button>
+
+<!-- Button 2 -->
+<button onclick="playAudio('gnosi.mp3')" class="btn btn-secondary">Προίκα</button>
+
+<!-- Button 3 -->
+<button onclick="playAudio('gnosi.mp3')" class="btn btn-success">Σπίτια</button>
+
+<!-- JavaScript for playing audio -->
+<script>
+    function playAudio(fileName) {
+        // Create a new audio object with the specified file
+        const audio = new Audio(`/audio/${fileName}`);
+        // Play the audio file
+        audio.play();
+    }
+</script>
